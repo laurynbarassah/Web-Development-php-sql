@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>AMIDZI NUTS | Order</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <header>
+
+        <img src="images/logo.png"
+             alt="AMIDZI NUTS Logo"
+             title="AMIDZI NUTS"
+             width="100">
+
+        <h1>AMIDZI NUTS</h1>
+
+        <p>Fresh • Healthy • Delicious</p>
+
+    </header>
+
+    <!-- Navigation -->
+
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="products.html">Products</a>
+
+        <a href="gallery.html">Gallery</a>
+
+        <a href="order.html">Order</a>
+
+        <a href="contact.html">Contact</a>
+
+    </nav>
+
+    <!-- Main Content -->
+
+    <main>
+
+        <h2>Place Your Order</h2>
+
+        <p>
+            Complete the form below to order your favourite nuts.
+            Fields marked with <strong>*</strong> are required.
+        </p>
+
+        <form action="process_order.php" method="POST" onsubmit="return validateForm(this)">
+
+            <fieldset>
+
+                <legend>Customer Information</legend>
+
+                <label for="fullname">Full Name *</label>
+
+                <input type="text"
+                       id="fullname"
+                       name="fullname"
+                       placeholder="Enter your full name"
+                       required>
+
+                <label for="email">Email Address *</label>
+
+                <input type="email"
+                       id="email"
+                       name="email"
+                       placeholder="example@gmail.com"
+                       required>
+
+                <label for="phone">Phone Number *</label>
+
+                <input type="tel"
+                       id="phone"
+                       name="phone"
+                       placeholder="+254 700 123 456"
+                       required>
+
+                <label for="address">Delivery Address *</label>
+
+                <textarea id="address"
+                          name="address"
+                          rows="4"
+                          placeholder="Enter your delivery address"
+                          required></textarea>
+
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+
+                <legend>Order Details</legend>
+
+                <label for="nut">Select Nut *</label>
+
+                <select id="nut"
+                        name="product"
+                        required>
+
+                    <option value="">-- Select a Nut --</option>
+                    <option>Almonds</option>
+                    <option>Cashews</option>
+                    <option>Peanuts</option>
+                    <option>Walnuts</option>
+                    <option>Macadamia Nuts</option>
+                    <option>Groundnuts</option>
+                    <option>Mixed Nuts</option>
+
+                </select>
+
+                <label for="quantity">Quantity (Kg) *</label>
+
+                <input type="number"
+                       id="quantity"
+                       name="quantity"
+                       min="1"
+                       max="100"
+                       placeholder="Enter quantity"
+                       required>
+
+                <label for="packaging">Packaging Option *</label>
+
+                <select id="packaging"
+                        name="packaging"
+                        required>
+
+                    <option value="">-- Select Packaging --</option>
+                    <option>Standard Pack</option>
+                    <option>Gift Pack</option>
+                    <option>Bulk Packaging</option>
+
+                </select>
+
+                <label for="payment">Payment Method *</label>
+
+                <select id="payment"
+                        name="payment"
+                        required>
+
+                    <option value="">-- Select Payment Method --</option>
+                    <option>M-Pesa</option>
+                    <option>Cash on Delivery</option>
+                    <option>Bank Transfer</option>
+
+                </select>
+
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+
+                <legend>Delivery Options</legend>
+
+                <label>
+
+                    <input type="radio"
+                           name="delivery"
+                           required>
+
+                    Home Delivery
+
+                </label>
+
+                <br><br>
+
+                <label>
+
+                    <input type="radio"
+                           name="delivery">
+
+                    Pick Up at Store
+
+                </label>
+
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+
+                <legend>Extras</legend>
+
+                <label>
+
+                    <input type="checkbox"
+                           name="newsletter">
+
+                    Subscribe to our newsletter
+
+                </label>
+
+                <br><br>
+
+                <label>
+
+                    <input type="checkbox"
+                           name="giftwrap">
+
+                    Add Gift Wrapping
+
+                </label>
+
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+
+                <legend>Additional Instructions</legend>
+
+                <textarea id="instructions"
+                          name="instructions"
+                          rows="5"
+                          placeholder="Enter any special delivery instructions here..."></textarea>
+
+            </fieldset>
+
+            <br>
+
+            <input type="submit" value="Place Order">
+
+            <input type="reset" value="Clear Form">
+
+        </form>
+
+    </main>
+
+    <!-- Footer -->
+
+    <footer>
+
+        <h3>AMIDZI NUTS</h3>
+
+        <p>Fresh • Healthy • Delicious</p>
+
+        <p><a href="mailto:amidzinuts@gmail.com">Email: amidzinuts@gmail.com</a></p>
+
+        <p><a href="tel:+254 700 610 091">Phone: +254 700 610 091</a></p>
+
+        <p>Open: Monday - Saturday | 8:00 AM - 6:00 PM</p>
+
+        <p>&copy; 2026 AMIDZI NUTS. All Rights Reserved.</p>
+
+    </footer>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

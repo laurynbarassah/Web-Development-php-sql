@@ -1,0 +1,492 @@
+/* Importing Google Font */
+@import url('https://fonts.googleapis.com/css2?family=poppins:wght@300;400;600;700&display=swap');
+
+/* General Styling */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:'poppins', sans-serif;
+    background-color:#8e3382;
+    color:#010405;
+    line-height:1.6;
+
+}
+
+/* Header */
+
+header{
+
+    background-color:#6187e1;
+    color:white;
+    text-align:center;
+    padding:20px;
+
+}
+
+header h1{
+
+    font-size:40px;
+
+}
+
+/* Navigation */
+
+nav{
+
+    background-color:#14097e;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:30px;
+    padding:15px;
+
+}
+
+nav a{
+
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:18px;
+    transition:0.3s;
+
+}
+
+nav a:hover{
+
+    color:#2dcc17;
+
+}
+
+/* Main Content */
+
+main{
+
+    width:90%;
+    margin:auto;
+    padding:30px;
+
+}
+
+/* Headings */
+
+h2{
+
+    margin-bottom:15px;
+    color:#df962a;
+
+}
+
+h3{
+
+    margin-top:25px;
+    margin-bottom:10px;
+
+}
+
+/* Paragraphs */
+
+p{
+
+    margin-bottom:15px;
+    font-size:20px;
+}
+
+/* Images */
+
+img{
+
+    max-width:100%;
+    border-radius:200px;
+
+}
+
+/* Buttons */
+
+button,
+input[type=submit],
+input[type=reset]{
+
+    background-color:#6B8E23;
+    color:rgba(253, 250, 252, 0.68);
+    border:none;
+    padding:12px 20px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+    transition:0.3s;
+
+}
+
+button:hover,
+input[type=submit]:hover,
+input[type=reset]:hover{
+
+    background-color:#810a0a;
+
+}
+
+/* Tables */
+
+table{
+
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+
+}
+
+table,
+th,
+td{
+
+    border:1px solid #8B6F47;
+
+}
+
+th{
+
+    background-color:#8B6F47;
+    color:white;
+
+}
+
+th,
+td{
+
+    padding:15px;
+    text-align:center;
+
+}
+
+tr:nth-child(even){
+
+    background-color:#F9F2E7;
+
+}
+
+/* Forms */
+
+form{
+
+    width:70%;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0px 0px 10px rgba(0,0,0,0.2);
+
+}
+
+fieldset{
+
+    border:2px solid #8B6F47;
+    padding:20px;
+
+}
+
+legend{
+
+    font-weight:bold;
+    color:#5C4033;
+
+}
+
+label{
+
+    font-weight:bold;
+
+}
+
+input,
+select,
+textarea{
+
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+    margin-bottom:20px;
+    border:1px solid gray;
+    border-radius:6px;
+
+}
+
+/* Lists */
+
+ul,
+ol{
+
+    margin-left:30px;
+    margin-top:15px;
+
+}
+
+/* Footer */
+
+footer{
+
+    background-color:#609fdd;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+
+}
+
+/* Product Cards */
+
+.card{
+
+    background:white;
+    width:300px;
+    padding:20px;
+    border-radius:10px;
+    text-align:center;
+    box-shadow:0px 0px 10px rgba(0,0,0,0.2);
+    transition:0.3s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+
+.card-container{
+
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:30px;
+    margin-top:30px;
+
+}
+
+/* ========================= */
+/* GALLERY FLIP CARDS */
+/* ========================= */
+
+.gallery{
+
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:30px;
+    margin-top:30px;
+
+}
+
+.flip-card{
+
+    width:250px;
+    height:300px;
+    perspective:1000px;
+
+}
+
+.flip-card-inner{
+
+    position:relative;
+    width:100%;
+    height:100%;
+    transition:transform 0.8s;
+    transform-style:preserve-3d;
+
+}
+
+.flip-card:hover .flip-card-inner{
+
+    transform:rotateY(180deg);
+
+}
+
+.flip-card-front,
+.flip-card-back{
+
+    position:absolute;
+    width:100%;
+    height:100%;
+    border-radius:10px;
+    backface-visibility:hidden;
+    overflow:hidden;
+    box-shadow:0px 0px 10px rgba(162, 22, 194, 0.2);
+
+}
+
+.flip-card-front{
+
+    background:white;
+
+}
+
+.flip-card-front img{
+
+    width:100%;
+    height:220px;
+    object-fit:cover;
+
+}
+
+.flip-card-front h3{
+
+    text-align:center;
+    padding:10px;
+
+}
+
+.flip-card-back{
+
+    background:#a40fc5;
+    color:white;
+    transform:rotateY(180deg);
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    padding:20px;
+    text-align:center;
+
+}
+
+.card img{
+
+    width:200px;
+    height:180px;
+    object-fit:cover;
+    border-radius:10px;
+
+}
+
+/* Gallery */
+
+.gallery{
+
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:30px;
+
+}
+ /* Social Media Icons */
+.social-icons{
+
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    margin-top:20px;
+
+}
+
+.social-icons a{
+
+    text-decoration:none;
+
+}
+
+.social-icons i{
+
+    font-size:35px;
+    color:#137e4a;
+    transition:0.3s;
+
+}
+
+.social-icons i:hover{
+
+    color:#D4A017;
+    transform:translateY(-5px);
+
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+nav{
+
+    flex-direction:column;
+
+}
+
+form{
+
+    width:95%;
+
+}
+
+}
+
+footer a{
+
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+
+}
+
+footer a:hover{
+
+    color:#FFD700;
+    text-decoration:underline;
+
+}
+
+/* ========================= */
+/* WELCOME OVERLAY */
+/* ========================= */
+
+.overlay{
+    display: none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.9);
+
+    
+    justify-content:center;
+    align-items:center;
+
+    z-index:9999;
+
+}
+
+.overlay-content{
+
+    background:white;
+    padding:40px;
+    border-radius:15px;
+    text-align:center;
+    width:350px;
+    box-shadow:0 0 20px rgba(0,0,0,0.5);
+
+}
+
+.overlay-content h2{
+
+    color:#14097e;
+    margin-bottom:15px;
+
+}
+
+.overlay-content input{
+
+    width:100%;
+    padding:12px;
+    border:1px solid #999;
+    border-radius:8px;
+    font-size:16px;
+
+}
