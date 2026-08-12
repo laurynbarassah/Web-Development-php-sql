@@ -18,6 +18,10 @@ $result = $conn->query($sql);
 <body>
 
 <header>
+    <img src="images/logo.png"
+             alt="AMIDZI NUTS Logo"
+             title="AMIDZI NUTS"
+             width="100">
     <h1>AMIDZI NUTS</h1>
     <p>Customer Orders</p>
 </header>
@@ -75,6 +79,15 @@ $result = $conn->query($sql);
 </main>
 
 <footer>
+     <h3>AMIDZI NUTS</h3>
+
+<p>Fresh &bull; Healthy &bull; Delicious</p>
+
+<p><a href="mailto:amidzinuts@gmail.com">Email: amidzinuts@gmail.com</a></p>
+
+<p><a href="tel:+254 700 610 091">Phone: +254 700 610 091</a></p>
+
+<p>Open: Monday - Saturday | 8:00 AM - 6:00 PM</p>
     <p>&copy; 2026 AMIDZI NUTS. All Rights Reserved.</p>
 </footer>
 
